@@ -32,4 +32,10 @@ export class AppComponent {
         todo.completed = !todo.completed;
     }
 
+    delete(todo: any){
+        let index =  this.todos.indexOf(todo);
+        if(index > -1){
+            this.todos.splice(index, 1)
+        }
+    }
 }
